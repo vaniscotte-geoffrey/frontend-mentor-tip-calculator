@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Tip calculator app</title>
   <script src="https://kit.fontawesome.com/5a9bc96bd9.js" crossorigin="anonymous"></script>
+  <script src="./script.js" defer></script>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -25,19 +26,19 @@
           <label for="bill" class="label">Bill</label>
           <div class="icon-input">
             <i class="fas fa-dollar-sign icon"></i>
-            <input data-bill type="number" id="bill" name="bill" value="142.55">
+            <input data-bill type="number" id="bill" name="bill" value="0" min="0" placeholder="Bill">
           </div>
         </div>
   
         <div class="input-container">
           <label class="label">Select Tip %</label>
           <div class="tip-button-container">
-            <button class="tip-percentage-button">5%</button>
-            <button class="tip-percentage-button">10%</button>
-            <button class="tip-percentage-button active">15%</button>
-            <button class="tip-percentage-button">25%</button>
-            <button class="tip-percentage-button">50%</button>
-            <button class="tip-percentage-button custom">Custom</button>
+            <button data-tip-button="5" class="tip-percentage-button">5%</button>
+            <button data-tip-button="10" class="tip-percentage-button">10%</button>
+            <button data-tip-button="15" class="tip-percentage-button active">15%</button>
+            <button data-tip-button="25" class="tip-percentage-button">25%</button>
+            <button data-tip-button="50" class="tip-percentage-button">50%</button>
+            <button data-tip-button="0" class="tip-percentage-button custom">Custom</button>
           </div>
         </div>
         
@@ -45,7 +46,7 @@
           <label for="people-number">Number of People</label>
           <div class="icon-input">
             <i class="fas fa-user icon"></i>
-            <input data-people-number type="number" name="people-number" id="people-number" value="5">
+            <input data-people-number type="number" name="people-number" id="people-number" value="1" min="1" placeholder="Number of people">
           </div>
         </div>
       </div>
@@ -55,14 +56,14 @@
             <h3>Tip Amount</h3>
             <p>/ person</p>
           </div>
-          <div data-tip-price class="price">$4.27</div>
+          <div data-tip-price class="price">$0</div>
         </div>
         <div class="price-result">
           <div class="desc">
             <h3>Total</h3>
             <p>/ person</p>
           </div>
-          <div data-total-price class="price">$32.79</div>
+          <div data-total-price class="price">$0</div>
         </div>
         <div class="spacer"></div>
         <button data-reset class="reset">RESET</button>
